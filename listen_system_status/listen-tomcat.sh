@@ -28,7 +28,7 @@ do
 		then
 			echo "$DEPLOY_CONTAINER is running....."
 			#kill process
-			kill -9 `ps -ef | grep $DEPLOY_CONTAINER | grep -v 'grep' | grep -v $0 | awk '{print $DEPLOY_CONTAINER}'`
+			kill -9 `ps -ef | grep $DEPLOY_CONTAINER | grep -v 'grep' | grep -v $0 | awk '{print $2}'`
 			#wait for container stopped
 			while true
 			do
